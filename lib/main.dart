@@ -31,21 +31,32 @@ class MyApp extends StatelessWidget {
           actionsIconTheme: IconThemeData(
             color: Colors.white,
           ),
+          iconTheme: IconThemeData(color: Colors.white),
         ),
         textTheme: GoogleFonts.bitterTextTheme(),
       ),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.light,
-      initialRoute: "add-journal",
+      initialRoute: "home",
       routes: {
         "home": (context) => const HomeScreen(),
-        "add-journal": (context) => AddJournalScreen(
+        /* "add-journal": (context) => AddJournalScreen(
               journal: Journal(
                   id: "id",
                   content: "content",
                   createdAt: DateTime.now(),
                   updatedAt: DateTime.now()),
-            ),
+            ), */
+      },
+      onGenerateRoute: (settings) {
+        if (settings.name == 'add-journal') {
+          final Journal journal = settings.arguments as Journal;
+          return MaterialPageRoute(
+            builder: (context) {
+              return AddJournalScreen(journal: journal);
+            },
+          );
+        }
       },
     );
   }
