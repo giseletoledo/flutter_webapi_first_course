@@ -2,36 +2,5 @@
   "learnhttp": {
     "content": "Olá mundo!"
   },
-  "journals": [
-    {
-      "id": "b5a341f0-7b32-11ed-9559-a32bd91fe460",
-      "content": "",
-      "createdAt": "2022-12-13 22:08:44.439952",
-      "updatedAt": "2022-12-13 22:08:44.439952"
-    },
-    {
-      "id": "fe19fa50-7b32-11ed-b8f0-35d7c77e343a",
-      "content": "",
-      "createdAt": "2022-12-13 22:10:46.013201",
-      "updatedAt": "2022-12-13 22:10:46.013201"
-    },
-    {
-      "id": "bdaa79f0-7b36-11ed-a6d5-f3d3b0b9ee9a",
-      "content": "Testando o diário",
-      "createdAt": "2022-12-05 22:10:47.454652",
-      "updatedAt": "2022-12-05 22:10:47.454652"
-    },
-    {
-      "id": "4abafea0-7b37-11ed-a6d5-f3d3b0b9ee9a",
-      "content": "Mais um teste!",
-      "createdAt": "2022-12-03 22:10:47.454652",
-      "updatedAt": "2022-12-03 22:10:47.454652"
-    },
-    {
-      "id": "d3c5dff0-7b3f-11ed-a6d5-f3d3b0b9ee9a",
-      "content": "Demais!!!!",
-      "createdAt": "2022-12-04 22:10:47.454652",
-      "updatedAt": "2022-12-04 22:10:47.454652"
-    }
-  ]
+  "journals": []
 }

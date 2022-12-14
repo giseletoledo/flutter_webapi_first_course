@@ -102,7 +102,7 @@ class JournalCard extends StatelessWidget {
       context,
       'add-journal',
       arguments: Journal(
-          id: const Uuid().v1(),
+          id: const Uuid().v1(), //uuid package
           content: "",
           createdAt: showedDate,
           updatedAt: showedDate),
