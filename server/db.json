@@ -2,5 +2,12 @@
   "learnhttp": {
     "content": "Olá mundo!"
   },
-  "journals": []
+  "journals": [
+    {
+      "id": "64692650-7b56-11ed-b524-2fb2ae50b4af",
+      "content": "teste",
+      "createdAt": "2022-12-07 02:23:43.060089",
+      "updatedAt": "2022-12-07 02:23:43.060089"
+    }
+  ]
 }
