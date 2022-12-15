@@ -14,7 +14,7 @@ class AddJournalScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            "${WeekDay(journal.createdAt.weekday).long.toLowerCase()}, ${journal.createdAt.day} | ${journal.createdAt.month} | ${journal.createdAt.year} "),
+            "${WeekDay(journal.createdAt).long.toLowerCase()}, ${journal.createdAt.day} | ${journal.createdAt.month} | ${journal.createdAt.year} "),
         actions: [
           IconButton(
             onPressed: (() {
@@ -38,7 +38,26 @@ class AddJournalScreen extends StatelessWidget {
     );
   }
 
-  Future<void> registerJournal(BuildContext context) async {
+  registerJournal(BuildContext context) {
+    String content = _contentController.text;
+
+    journal.content = content;
+
+    JournalService service = JournalService();
+
+    service.register(journal).then((value) {
+      if (value) {
+        Navigator.pop(context, DisposeStatus.success);
+      } else {
+        Navigator.pop(context, DisposeStatus.error);
+      }
+    });
+  }
+
+  /* 
+  Alternativa async com Stateless Widget
+  Future<void> registerJournal(BuildContext context,
+      [bool mounted = true]) async {
     String content = _contentController.text;
 
     journal.content = content;
@@ -46,7 +65,9 @@ class AddJournalScreen extends StatelessWidget {
     JournalService service = JournalService();
     bool result =
         await service.register(journal); //journal passado como parâmetro
-
+    if (!mounted) return;
     Navigator.pop(context, result);
-  }
+  } */
 }
+
+enum DisposeStatus { exit, error, success }

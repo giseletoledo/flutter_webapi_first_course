@@ -53,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
           windowPage: windowPage,
           currentDay: currentDay,
           database: database,
+          refreshFunction: refresh, //add
         ),
       ),
     );

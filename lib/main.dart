@@ -57,6 +57,8 @@ class MyApp extends StatelessWidget {
               return AddJournalScreen(journal: journal);
             },
           );
+        } else {
+          return null;
         }
       },
     );
