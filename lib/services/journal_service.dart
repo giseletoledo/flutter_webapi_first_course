@@ -46,7 +46,7 @@ class JournalService {
       list.add(Journal.fromMap(jsonMap));
     }
 
-    print(list.length);
+    //print(list.length);
 
     return list;
   }
