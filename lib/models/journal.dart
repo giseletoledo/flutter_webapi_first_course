@@ -29,8 +29,8 @@ class Journal {
     return {
       "id": id,
       "content": content,
-      "createdAt": createdAt.toString(),
-      "updatedAt": createdAt.toString()
+      "created_at": createdAt.toString(),
+      "updated_at": updatedAt.toString()
     };
   }
 
